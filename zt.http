@@ -1,0 +1,9 @@
+@base_url=https://api.zerotier.com/api/v1
+
+# @name network
+GET {{base_url}}/network
+Authorization: token {{$dotenv ZT_TOKEN}}
+###
+
+GET {{base_url}}/network/{{network.response.body.$[0].id}}/member
+Authorization: token {{$dotenv ZT_TOKEN}}
